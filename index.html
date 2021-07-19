@@ -42,6 +42,7 @@ return;
                <label id='name-label'>FAMILY ID</label>
                <input type='number' name="FAMILY ID" id='name' placeholder='FAMILY ID' class='form-input-size' required />
            </div>
+</script>  
 <input type="text" name="Class" id="class_out" style="visibility: hidden;">                   
            <div class='form-input'>
                <p>Class</p>
@@ -62,17 +63,17 @@ return;
 
            <div class='form-input'>
                <label id='name-label'>Date of Addmission</label>
-               <input type='text' name="Date of Addmission" placeholder='DD/MM/YYYY' id='Date of Addmission' class='form-input-size' required />
+               <input type='text' autocapitalize="characters" name="Date of Addmission" placeholder='DD/MM/YYYY' id='Date of Addmission' class='form-input-size' required />
            </div>
 
            <div class='form-input'>
                <label id='name-label'>Student Name</label>
-               <input type='text' oninput="this.value = this.value.toUpperCase()" name="Student Name" id='name' placeholder='Student Name' class='form-input-size' required />
+               <input type='text' autocapitalize="characters"  name="Student Name" id='name' placeholder='Student Name' class='form-input-size' required />
            </div>
 
            <div class='form-input'>
                <label id='name-label'>Student Name(As Per adhar)</label>
-               <input type='text' oninput="this.value = this.value.toUpperCase()" name="Student Name(As Per adhar)" id='name' placeholder='Student Name(As Per adhar)' class='form-input-size' required />
+               <input type='text' autocapitalize="characters" name="Student Name(As Per adhar)" id='name' placeholder='Student Name(As Per adhar)' class='form-input-size' required />
            </div>
 
 
@@ -96,12 +97,12 @@ function maxLengthCheck(object)
 
            <div class='form-input'>
                <label id='name-label'>FATHER/MOTHER NAME AS PER STUDENT ADHAR</label>
-               <input type='text' oninput="this.value = this.value.toUpperCase()" name="FATHER/MOTHER NAME AS PER STUDENT ADHAR" id='name' placeholder='FATHER/MOTHER NAME AS PER STUDENT ADHAR' class='form-input-size' required />
+               <input type='text' autocapitalize="characters" name="FATHER/MOTHER NAME AS PER STUDENT ADHAR" id='name' placeholder='FATHER/MOTHER NAME AS PER STUDENT ADHAR' class='form-input-size' required />
            </div>
 
            <div class='form-input'>
                <label id='name-label'>Father Name (As Per adhar)</label>
-               <input type='text' oninput="this.value = this.value.toUpperCase()" name="Father Name (As Per adhar)" id='name' placeholder='Father Name (As Per adhar)' class='form-input-size' required />
+               <input type='text' autocapitalize="characters" name="Father Name (As Per adhar)" id='name' placeholder='Father Name (As Per adhar)' class='form-input-size' required />
            </div>
 
            <div class='form-input'>
@@ -111,7 +112,7 @@ function maxLengthCheck(object)
 
             <div class='form-input'>
                <label id='name-label'>Mother Name (As per adhar)</label>
-               <input type='text'  oninput="this.value = this.value.toUpperCase()" name="Mother Name (As per adhar)" id='name' placeholder='Mother Name (As per adhar)' class='form-input-size' required />
+               <input type='text' autocapitalize="characters" name="Mother Name (As per adhar)" id='name' placeholder='Mother Name (As per adhar)' class='form-input-size' required />
            </div>
 
            <div class='form-input'>
@@ -122,17 +123,17 @@ function maxLengthCheck(object)
 
           <div class='form-input'>
                <label id='name-label'>IFSC CODE </label>
-               <input type='text' oninput="this.value = this.value.toUpperCase()" name="IFSC CODE" id='name' placeholder='IFSC CODE' class='form-input-size' required />
+               <input type='text' autocapitalize="characters" name="IFSC CODE" id='name' placeholder='IFSC CODE' class='form-input-size' required />
            </div>
 
            <div class='form-input'>
                <label id='name-label'>BRANCH</label>
-               <input type='text' oninput="this.value = this.value.toUpperCase()" name="BRANCH" id='name' placeholder='BRANCH' class='form-input-size' required />
+               <input type='text' autocapitalize="characters" name="BRANCH" id='name' placeholder='BRANCH' class='form-input-size' required />
            </div>
 
            <div class='form-input'>
                <label id='name-label'>ACCOUNT HOLDER NAME AS PER PASS BOOK </label>
-               <input type='text' oninput="this.value = this.value.toUpperCase()" name="ACCOUNT HOLDER NAME AS PER PASS BOOK" id='name' placeholder='ACCOUNT HOLDER NAME AS PER PASS BOOK' class='form-input-size' required />
+               <input type='text' autocapitalize="characters" name="ACCOUNT HOLDER NAME AS PER PASS BOOK" id='name' placeholder='ACCOUNT HOLDER NAME AS PER PASS BOOK' class='form-input-size' required />
            </div>
 
            <div class='form-input'>
@@ -142,7 +143,7 @@ function maxLengthCheck(object)
 
             <div class='form-input'>
                <label id='name-label'>ACCOUNT HOLDER NAME AS PER ADHAR</label>
-               <input type='text' oninput="this.value = this.value.toUpperCase()" name="ACCOUNT HOLDER NAME AS PER ADHAR" id='name' placeholder='ACCOUNT HOLDER NAME AS PER ADHAR' class='form-input-size' required />
+               <input type='text' autocapitalize="characters" name="ACCOUNT HOLDER NAME AS PER ADHAR" id='name' placeholder='ACCOUNT HOLDER NAME AS PER ADHAR' class='form-input-size' required />
            </div>
 
             <div class='form-input'>
@@ -245,7 +246,7 @@ return;
        </form>
    </div>
    <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzBoS1sJvdwrVinQnwfkEPAqVbGHRBzSJNo7_BRtpvq1ZtZBAhY/exec'
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxHH2rZqydbQZ0esfCrFnH88oPs4tJAcw97oa-e2GsZ5WL0uKR3/exec'
             const form = document.forms['google-sheet']
           
             form.addEventListener('submit', e => {
@@ -313,7 +314,6 @@ h1{
 
 .form-input-size{
    display: block;
-   text-transform:uppercase;
    width: 100%;
    height: 1.5rem;
    padding: 0.3rem 0.4rem;
