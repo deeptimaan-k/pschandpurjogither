@@ -7,6 +7,13 @@
    <title>PS CHANDPUR JOGITHER - NAWABGANJ(BAREILLY)</title>
 </head>
 <body>
+  <script type="text/javascript">
+    function upperCaseF(a){
+    setTimeout(function(){
+        a.value = a.value.toUpperCase();
+    }, 1);
+}
+  </script>
    <div class="container">
        <header>
            <h1 id='title'>PS CHANDPUR JOGITHER - NAWABGANJ(BAREILLY)</h1>
@@ -15,7 +22,7 @@
 
            </p>
        </header>
-       <form  method="POST" autocomplete="off" name="google-sheet" id='survey-form'>
+       <form method="POST" autocomplete="off" name="google-sheet" id='survey-form'>
 <script>
 function copyTextValue9(selectedOption) {
 if(selectedOption.selectedIndex <= 0){
@@ -40,7 +47,7 @@ return;
 
            <div class='form-input'>
                <label id='name-label'>FAMILY ID</label>
-               <input type='text' name="FAMILY ID" id='name' placeholder='FAMILY ID' class='form-input-size' required />
+               <input type='number' name="FAMILY ID" id='name' placeholder='FAMILY ID' class='form-input-size' required />
            </div>
 <script>
 function copyTextValue(selectedOption) {
@@ -68,7 +75,7 @@ return;
 
             <div class='form-input'>
                <label id='name-label'>SR Number</label>
-               <input type='text' name="SR Number" id='name' placeholder='SR Number' class='form-input-size' required />
+               <input type='number' name="SR Number" id='name' placeholder='SR Number' class='form-input-size' required />
            </div>
 
            <div class='form-input'>
@@ -78,12 +85,12 @@ return;
 
            <div class='form-input'>
                <label id='name-label'>Student Name</label>
-               <input type='text' name="Student Name" id='name' placeholder='Student Name' class='form-input-size' required />
+               <input type='text' onkeydown="upperCaseF(this)" name="Student Name" id='name' placeholder='Student Name' class='form-input-size' required />
            </div>
 
            <div class='form-input'>
                <label id='name-label'>Student Name(As Per adhar)</label>
-               <input type='text' name="Student Name(As Per adhar)" id='name' placeholder='Student Name(As Per adhar)' class='form-input-size' required />
+               <input type='text' onkeydown="upperCaseF(this)" name="Student Name(As Per adhar)" id='name' placeholder='Student Name(As Per adhar)' class='form-input-size' required />
            </div>
 
 
@@ -107,12 +114,12 @@ function maxLengthCheck(object)
 
            <div class='form-input'>
                <label id='name-label'>FATHER/MOTHER NAME AS PER STUDENT ADHAR</label>
-               <input type='text' name="FATHER/MOTHER NAME AS PER STUDENT ADHAR" id='name' placeholder='FATHER/MOTHER NAME AS PER STUDENT ADHAR' class='form-input-size' required />
+               <input type='text' onkeydown="upperCaseF(this)" name="FATHER/MOTHER NAME AS PER STUDENT ADHAR" id='name' placeholder='FATHER/MOTHER NAME AS PER STUDENT ADHAR' class='form-input-size' required />
            </div>
 
            <div class='form-input'>
                <label id='name-label'>Father Name (As Per adhar)</label>
-               <input type='text' name="Father Name (As Per adhar)" id='name' placeholder='Father Name (As Per adhar)' class='form-input-size' required />
+               <input type='text' onkeydown="upperCaseF(this)" name="Father Name (As Per adhar)" id='name' placeholder='Father Name (As Per adhar)' class='form-input-size' required />
            </div>
 
            <div class='form-input'>
@@ -122,7 +129,7 @@ function maxLengthCheck(object)
 
             <div class='form-input'>
                <label id='name-label'>Mother Name (As per adhar)</label>
-               <input type='text' name="Mother Name (As per adhar)" id='name' placeholder='Mother Name (As per adhar)' class='form-input-size' required />
+               <input type='text'  onkeydown="upperCaseF(this)" name="Mother Name (As per adhar)" id='name' placeholder='Mother Name (As per adhar)' class='form-input-size' required />
            </div>
 
            <div class='form-input'>
@@ -133,17 +140,17 @@ function maxLengthCheck(object)
 
           <div class='form-input'>
                <label id='name-label'>IFSC CODE </label>
-               <input type='text' name="IFSC CODE" id='name' placeholder='IFSC CODE' class='form-input-size' required />
+               <input type='text' onkeydown="upperCaseF(this)" name="IFSC CODE" id='name' placeholder='IFSC CODE' class='form-input-size' required />
            </div>
 
            <div class='form-input'>
                <label id='name-label'>BRANCH</label>
-               <input type='text' name="BRANCH" id='name' placeholder='BRANCH' class='form-input-size' required />
+               <input type='text' onkeydown="upperCaseF(this)" name="BRANCH" id='name' placeholder='BRANCH' class='form-input-size' required />
            </div>
 
            <div class='form-input'>
                <label id='name-label'>ACCOUNT HOLDER NAME AS PER PASS BOOK </label>
-               <input type='text' name="ACCOUNT HOLDER NAME AS PER PASS BOOK" id='name' placeholder='ACCOUNT HOLDER NAME AS PER PASS BOOK' class='form-input-size' required />
+               <input type='text' onkeydown="upperCaseF(this)" name="ACCOUNT HOLDER NAME AS PER PASS BOOK" id='name' placeholder='ACCOUNT HOLDER NAME AS PER PASS BOOK' class='form-input-size' required />
            </div>
 
            <div class='form-input'>
@@ -153,12 +160,12 @@ function maxLengthCheck(object)
 
             <div class='form-input'>
                <label id='name-label'>ACCOUNT HOLDER NAME AS PER ADHAR</label>
-               <input type='text' name="ACCOUNT HOLDER NAME AS PER ADHAR" id='name' placeholder='ACCOUNT HOLDER NAME AS PER ADHAR' class='form-input-size' required />
+               <input type='text' onkeydown="upperCaseF(this)" name="ACCOUNT HOLDER NAME AS PER ADHAR" id='name' placeholder='ACCOUNT HOLDER NAME AS PER ADHAR' class='form-input-size' required />
            </div>
 
             <div class='form-input'>
                <label id='name-label'>ACCOUNT NUMBER</label>
-               <input type='text' name="ACCOUNT NUMBER" id='name' placeholder='ACCOUNT NUMBER' class='form-input-size' required />
+               <input type='number' name="ACCOUNT NUMBER" id='name' placeholder='ACCOUNT NUMBER' class='form-input-size' required />
            </div>
 
            <div class='form-input'>
@@ -267,7 +274,6 @@ return;
                 document.getElementById("survey-form").reset();
             })
           </script>
-
 </body>
 </html>
 <style>
