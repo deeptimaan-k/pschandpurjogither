@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html LANG=pt_BR /opt/google/chrome/chrome>
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>PS CHANDPUR JOGITHER - NAWABGANJ(BAREILLY)</title>
+</head>
+<body>
+   <div class="container">
+       <header>
+           <h1 id='title'>PS CHANDPUR JOGITHER - NAWABGANJ(BAREILLY)</h1>
+           <p id='description'>
+              UDISE CODE - 9200412701
+
+           </p>
+       </header>
+       <form  method="POST" autocomplete="off" name="google-sheet" id='survey-form'>
+<script>
+function copyTextValue9(selectedOption) {
+if(selectedOption.selectedIndex <= 0){
+document.getElementById("destination").value = '';
+return;
+}
+
+ var selectedOptionValue = selectedOption.value;
+ document.getElementById("destination").value = selectedOptionValue;
+}
+</script>
+
+<input type="text" name="Session" id="destination" style="visibility: hidden;">
+        <div class='form-input'>
+               <p>Session</p>
+               <select onChange="copyTextValue9(this);" id='dropdown' class='form-input-size' required>
+                   <option disabled selected value>--SELECT--</option>
+                   <option value="2021-22">2021-22</option>
+               </select>
+           </div>
+
+
+           <div class='form-input'>
+               <label id='name-label'>FAMILY ID</label>
+               <input type='text' name="FAMILY ID" id='name' placeholder='FAMILY ID' class='form-input-size' required />
+           </div>
+<script>
+function copyTextValue(selectedOption) {
+if(selectedOption.selectedIndex <= 0){
+document.getElementById("class_out").value = '';
+return;
+}
+
+ var selectedOptionValue = selectedOption.value;
+ document.getElementById("class_out").value = selectedOptionValue;
+}
+</script>  
+<input type="text" name="Class" id="class_out" style="visibility: hidden;">                   
+           <div class='form-input'>
+               <p>Class</p>
+               <select onChange="copyTextValue(this);" id='class' class='form-input-size' required>
+                   <option disabled selected value>--SELECT--</option>
+                   <option value="I">I</option>
+                   <option value="II">II</option>
+                   <option value="III">III</option>
+                   <option value="IV">IV</option>
+                   <option value="V">V</option>
+               </select>
+           </div>
+
+            <div class='form-input'>
+               <label id='name-label'>SR Number</label>
+               <input type='text' name="SR Number" id='name' placeholder='SR Number' class='form-input-size' required />
+           </div>
+
+           <div class='form-input'>
+               <label id='name-label'>Date of Addmission</label>
+               <input type='text' name="Date of Addmission" placeholder='DD/MM/YYYY' id='Date of Addmission' class='form-input-size' required />
+           </div>
+
+           <div class='form-input'>
+               <label id='name-label'>Student Name</label>
+               <input type='text' name="Student Name" id='name' placeholder='Student Name' class='form-input-size' required />
+           </div>
+
+           <div class='form-input'>
+               <label id='name-label'>Student Name(As Per adhar)</label>
+               <input type='text' name="Student Name(As Per adhar)" id='name' placeholder='Student Name(As Per adhar)' class='form-input-size' required />
+           </div>
+
+
+
+<script type="text/javascript">
+function maxLengthCheck(object)
+  {
+    if (object.value.length > object.maxLength)
+      object.value = object.value.slice(0, object.maxLength)
+  }
+</script>
+           <div class='form-input'>
+               <label id='name-label'>STUDENT ADHAR NO</label>
+               <input oninput="maxLengthCheck(this)" type = "number" maxlength = "12" name="STUDENT ADHAR NO" id='name' placeholder='STUDENT ADHAR NO' class='form-input-size' required />
+           </div>
+           
+           <div class='form-input'>
+               <label id='name-label'>Student DOB</label>
+               <input type='text' name="Student DOB" placeholder="DD/MM/YYYY" class='form-input-size' required />
+           </div>
+
+           <div class='form-input'>
+               <label id='name-label'>FATHER/MOTHER NAME AS PER STUDENT ADHAR</label>
+               <input type='text' name="FATHER/MOTHER NAME AS PER STUDENT ADHAR" id='name' placeholder='FATHER/MOTHER NAME AS PER STUDENT ADHAR' class='form-input-size' required />
+           </div>
+
+           <div class='form-input'>
+               <label id='name-label'>Father Name (As Per adhar)</label>
+               <input type='text' name="Father Name (As Per adhar)" id='name' placeholder='Father Name (As Per adhar)' class='form-input-size' required />
+           </div>
+
+           <div class='form-input'>
+               <label id='name-label'>FATHER ADHAR NO</label>
+               <input oninput="maxLengthCheck(this)" type = "number" maxlength = "12" name="FATHER ADHAR NO" id='name' placeholder='FATHER ADHAR NO' class='form-input-size' required />
+           </div>
+
+            <div class='form-input'>
+               <label id='name-label'>Mother Name (As per adhar)</label>
+               <input type='text' name="Mother Name (As per adhar)" id='name' placeholder='Mother Name (As per adhar)' class='form-input-size' required />
+           </div>
+
+           <div class='form-input'>
+               <label id='name-label'>MOTHER ADHAR NO</label>
+               <input oninput="maxLengthCheck(this)" type = "number" maxlength = "12" name="MOTHER ADHAR NO" id='name' placeholder='MOTHER ADHAR NO' class='form-input-size' required />
+           </div>
+
+
+          <div class='form-input'>
+               <label id='name-label'>IFSC CODE </label>
+               <input type='text' name="IFSC CODE" id='name' placeholder='IFSC CODE' class='form-input-size' required />
+           </div>
+
+           <div class='form-input'>
+               <label id='name-label'>BRANCH</label>
+               <input type='text' name="BRANCH" id='name' placeholder='BRANCH' class='form-input-size' required />
+           </div>
+
+           <div class='form-input'>
+               <label id='name-label'>ACCOUNT HOLDER NAME AS PER PASS BOOK </label>
+               <input type='text' name="ACCOUNT HOLDER NAME AS PER PASS BOOK" id='name' placeholder='ACCOUNT HOLDER NAME AS PER PASS BOOK' class='form-input-size' required />
+           </div>
+
+           <div class='form-input'>
+               <label id='name-label'>ACCOUNT HOLDER ADHAR NO</label>
+               <input oninput="maxLengthCheck(this)" type = "number" maxlength = "12" name="ACCOUNT HOLDER ADHAR NO" id='name' placeholder='ACCOUNT HOLDER ADHAR NO' class='form-input-size' required />
+           </div>
+
+            <div class='form-input'>
+               <label id='name-label'>ACCOUNT HOLDER NAME AS PER ADHAR</label>
+               <input type='text' name="ACCOUNT HOLDER NAME AS PER ADHAR" id='name' placeholder='ACCOUNT HOLDER NAME AS PER ADHAR' class='form-input-size' required />
+           </div>
+
+            <div class='form-input'>
+               <label id='name-label'>ACCOUNT NUMBER</label>
+               <input type='text' name="ACCOUNT NUMBER" id='name' placeholder='ACCOUNT NUMBER' class='form-input-size' required />
+           </div>
+
+           <div class='form-input'>
+               <label id='name-label'>ACCOUNT HOLDER MOBILE NO</label>
+               <input oninput="maxLengthCheck(this)" type = "number" maxlength = "10" name="ACCOUNT HOLDER MOBILE NO" id='name' placeholder='ACCOUNT HOLDER MOBILE NO' class='form-input-size' required />
+           </div>
+<script>
+function copyTextValue2(selectedOption) {
+if(selectedOption.selectedIndex <= 0){
+document.getElementById("same_out").value = '';
+return;
+}
+
+ var selectedOptionValue = selectedOption.value;
+ document.getElementById("same_out").value = selectedOptionValue;
+}
+</script> 
+<input type="text" name="SAME FAMILY MEMBER" id="same_out" style="visibility: hidden;"> 
+           <div class='form-input'>
+               <p>SAME FAMILY MEMBER</p>
+               <select onChange="copyTextValue2(this);" id='dropdown' class='form-input-size' required>
+                   <option disabled selected value>--SECECT--</option>
+                   <option value='YES'>YES</option>
+                   <option value='NO'>NO</option>
+               </select>
+           </div>
+<script>
+function copyTextValue3(selectedOption) {
+if(selectedOption.selectedIndex <= 0){
+document.getElementById("card").value = '';
+return;
+}
+
+ var selectedOptionValue = selectedOption.value;
+ document.getElementById("card").value = selectedOptionValue;
+}
+</script>  
+<input type="text" name="Ration Card Type" id="card" style="visibility: hidden;">   
+           <div class='form-input'>
+               <p>Ration Card Type</p>
+               <select onChange="copyTextValue3(this);" id='dropdown' class='form-input-size' required>
+                   <option disabled selected value>--SECECT--</option>
+                   <option value='APL'>APL</option>
+                   <option value='BPL'>BPL</option>
+                   <option value='ANTYODAY'>ANTYODAY</option>
+               </select>
+           </div>
+<script>
+function copyTextValue4(selectedOption) {
+if(selectedOption.selectedIndex <= 0){
+document.getElementById("Category").value = '';
+return;
+}
+
+ var selectedOptionValue = selectedOption.value;
+ document.getElementById("Category").value = selectedOptionValue;
+}
+</script>  
+<input type="text" name="Category" id="Category" style="visibility: hidden;">  
+
+           <div class='form-input'>
+               <p>Category</p>
+               <select onChange="copyTextValue4(this);" id='dropdown' class='form-input-size' required>
+                   <option disabled selected value>--SECECT--</option>
+                   <option value='GENERAL'>GENERAL</option>
+                   <option value='OBC'>OBC</option>
+                   <option value='SC'>SC</option>
+                   <option value='ST'>ST</option>
+               </select>
+           </div>
+<script>
+function copyTextValue5(selectedOption) {
+if(selectedOption.selectedIndex <= 0){
+document.getElementById("Is CWSN Student").value = '';
+return;
+}
+
+ var selectedOptionValue = selectedOption.value;
+ document.getElementById("Is CWSN Student").value = selectedOptionValue;
+}
+</script>  
+<input type="text" name="Is CWSN Student" id="Is CWSN Student" style="visibility: hidden;">
+           <div class='form-input'>
+               <p>Is CWSN Student</p>
+               <select onChange="copyTextValue5(this);" id='dropdown' class='form-input-size' required>
+                   <option disabled selected value>--SECECT--</option>
+                   <option value='YES'>YES</option>
+                   <option value='NO'>NO</option>
+               </select>
+           </div>
+
+           <div class='form-input'>
+               <input type="submit" id='myBtn' class="submitBtn" value="Submit"/>
+           </div>
+       </form>
+   </div>
+   <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxHH2rZqydbQZ0esfCrFnH88oPs4tJAcw97oa-e2GsZ5WL0uKR3/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Data Saved."))
+                .catch(error => console.error('Error!', error.message))
+                document.getElementById("survey-form").reset();
+            })
+          </script>
+
+</body>
+</html>
+<style>
+  html{
+    font-size: 16px;
+}
+
+body{
+    background-color: rgba(98, 95, 241, 0.635);
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+}
+
+.container{
+  width: 100%;
+  margin: 3.2rem auto 0 auto;
+}
+
+@media(min-width: 576px){
+  .container{
+    max-width: 540px;
+  }
+}
+
+@media(min-width: 768px){
+  .container{
+    max-width: 720px
+  }
+}
+
+header{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+h1{
+  font-weight: 400;
+}
+
+#description{
+  font-weight: 200;
+  font-style: italic;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5)
+}
+#survey-form{
+   background: rgba(21, 20, 85, 0.7);
+   padding: 2.3rem 0.5rem;
+   border-radius: 0.3rem;
+}
+
+.form-input{
+   margin: 0 2.5rem 1.2rem 2rem;
+}
+
+.form-input-size{
+   display: block;
+   text-transform:uppercase;
+   width: 100%;
+   height: 1.5rem;
+   padding: 0.3rem 0.4rem;
+   border-radius: 0.2rem;
+   outline: 0;
+   border-style: none;
+   margin-top: 0.4rem;  
+}
+p{
+ font-size: 1.12rem;
+}
+
+#radio-btn,
+#check-box {
+ margin-right: 0.5rem;
+ min-height: 1.2rem;
+ min-width: 1.2rem;
+}
+
+label {
+ display: flex;
+ align-items: center;
+ font-size: 1.125rem;
+ margin-bottom: 0.5rem;
+}
+textarea{
+ width: 100%;
+ min-height: 6rem;
+ resize: vertical;
+ padding: 0.5rem 0 0 0.5rem;
+}
+
+#myBtn{
+ width: 100%;
+ padding: 0.8rem;
+ background: rgb(7, 173, 10);
+ color: white;
+ border-radius: 0.2rem;
+ cursor: pointer;
+ border: none;
+}
+</style>
