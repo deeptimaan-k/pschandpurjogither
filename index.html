@@ -4,6 +4,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
    <title>PS CHANDPUR JOGITHER - NAWABGANJ(BAREILLY)</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
 
            </p>
        </header>
-       <form method="POST" autocomplete="off" name="google-sheet" id='survey-form'>
+       <form method="get" id="frmSubmit">
 <script>
 function copyTextValue9(selectedOption) {
 if(selectedOption.selectedIndex <= 0){
@@ -42,11 +43,21 @@ return;
                <label id='name-label'>FAMILY ID</label>
                <input type='number' name="FAMILY ID" id='name' placeholder='FAMILY ID' class='form-input-size' required />
            </div>
+<script>
+function copyTextValue21(selectedOption) {
+if(selectedOption.selectedIndex <= 0){
+document.getElementById("class_out").value = '';
+return;
+}
+
+ var selectedOptionValue = selectedOption.value;
+ document.getElementById("class_out").value = selectedOptionValue;
+}
 </script>  
-<input type="text" name="Class" id="class_out" style="visibility: hidden;">                   
+<input type="text" name="Class" id="class_out" style="visibility:hidden;">                   
            <div class='form-input'>
                <p>Class</p>
-               <select onChange="copyTextValue(this);" id='class' class='form-input-size' required>
+               <select onChange="copyTextValue21(this);" id='class' class='form-input-size' required>
                    <option disabled selected value>--SELECT--</option>
                    <option value="I">I</option>
                    <option value="II">II</option>
@@ -55,6 +66,7 @@ return;
                    <option value="V">V</option>
                </select>
            </div>
+
 
             <div class='form-input'>
                <label id='name-label'>SR Number</label>
@@ -241,22 +253,29 @@ return;
            </div>
 
            <div class='form-input'>
-               <input type="submit" id='myBtn' class="submitBtn" value="Submit"/>
+               <button type="submit" id="btnSubmit" class="submitBtn">Submit</button>
            </div>
+           <p id="msg" style="margin-left: 45%;"></p>
        </form>
    </div>
    <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbxHH2rZqydbQZ0esfCrFnH88oPs4tJAcw97oa-e2GsZ5WL0uKR3/exec'
-            const form = document.forms['google-sheet']
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("Data Saved."))
-                .catch(error => console.error('Error!', error.message))
-                document.getElementById("survey-form").reset();
-            })
-          </script>
+    jQuery('#frmSubmit').on('submit',function(e){
+    e.preventDefault();
+    jQuery('#msg').html('Please wait...');
+    jQuery('#btnSubmit').attr('disabled',true);
+    jQuery.ajax({
+      url:'https://script.google.com/macros/s/AKfycbxU-js0mCB9HICjT4zexZLlGLgu_EM2CJp657L7SrIZRPc2-Jq5qEjzAVWnXidRTMmpwA/exec',
+      type:'post',
+      data:jQuery('#frmSubmit').serialize(),
+      success:function(result){
+        jQuery('#frmSubmit')[0].reset();
+        jQuery('#msg').html('');
+        alert("Data Saved.!!")
+        jQuery('#btnSubmit').attr('disabled',false);
+      }
+    });
+    });
+    </script>
 </body>
 </html>
 <style>
@@ -265,7 +284,7 @@ return;
 }
 
 body{
-    background-color: rgba(98, 95, 241, 0.635);
+    background-color: rgba(220, 120, 7, 1);
     margin: 0;
     font-family: sans-serif;
     color: white;
@@ -302,8 +321,8 @@ h1{
   font-style: italic;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5)
 }
-#survey-form{
-   background: rgba(21, 20, 85, 0.7);
+#frmSubmit{
+   background: rgba(170, 0, 3, 0.86);
    padding: 2.3rem 0.5rem;
    border-radius: 0.3rem;
 }
@@ -346,7 +365,7 @@ textarea{
  padding: 0.5rem 0 0 0.5rem;
 }
 
-#myBtn{
+#btnSubmit{
  width: 100%;
  padding: 0.8rem;
  background: rgb(7, 173, 10);
