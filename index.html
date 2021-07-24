@@ -1,14 +1,27 @@
-<!DOCTYPE html>
-<html LANG=pt_BR /opt/google/chrome/chrome>
+<!doctype html>
+<html>
 <head>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-   <title>PS CHANDPUR JOGITHER - NAWABGANJ(BAREILLY)</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<title>PS CHANDPUR JOGITHER - NAWABGANJ(BAREILLY)</title>
+<style type="text/css">
+#loader {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.75) url(loading2.gif) no-repeat center center;
+  z-index: 10000;
+}
+</style>
 </head>
 <body>
-   <div class="container">
+  <div class="container">
        <header>
            <h1 id='title'>PS CHANDPUR JOGITHER - NAWABGANJ(BAREILLY)</h1>
            <p id='description'>
@@ -16,8 +29,8 @@
 
            </p>
        </header>
-       <form method="get" id="frmSubmit">
-<script>
+       <form method="POST" autocomplete="off" name="google-sheet" id='survey-form'>
+        <script>
 function copyTextValue9(selectedOption) {
 if(selectedOption.selectedIndex <= 0){
 document.getElementById("destination").value = '';
@@ -43,8 +56,9 @@ return;
                <label id='name-label'>FAMILY ID</label>
                <input type='number' name="FAMILY ID" id='name' placeholder='FAMILY ID' class='form-input-size' required />
            </div>
+  
 <script>
-function copyTextValue21(selectedOption) {
+function copyTextValueclass(selectedOption) {
 if(selectedOption.selectedIndex <= 0){
 document.getElementById("class_out").value = '';
 return;
@@ -53,11 +67,12 @@ return;
  var selectedOptionValue = selectedOption.value;
  document.getElementById("class_out").value = selectedOptionValue;
 }
-</script>  
-<input type="text" name="Class" id="class_out" style="visibility:hidden;">                   
+</script>
+
+<input type="text" name="Class" id="class_out" style="visibility: hidden;">                  
            <div class='form-input'>
                <p>Class</p>
-               <select onChange="copyTextValue21(this);" id='class' class='form-input-size' required>
+               <select onChange="copyTextValueclass(this);" id='class' class='form-input-size' required>
                    <option disabled selected value>--SELECT--</option>
                    <option value="I">I</option>
                    <option value="II">II</option>
@@ -66,7 +81,6 @@ return;
                    <option value="V">V</option>
                </select>
            </div>
-
 
             <div class='form-input'>
                <label id='name-label'>SR Number</label>
@@ -253,31 +267,35 @@ return;
            </div>
 
            <div class='form-input'>
-               <button type="submit" id="btnSubmit" class="submitBtn">Submit</button>
+               <input type="submit" id='myBtn' class="submitBtn" value="Submit"/>
            </div>
-           <p id="msg" style="margin-left: 45%;"></p>
-       </form>
-   </div>
-   <script>
-    jQuery('#frmSubmit').on('submit',function(e){
+           <span id="show_data">
+           <a href="https://docs.google.com/spreadsheets/d/1cyyoyXJz7rnx8FZfsBpLbcmVz1kDiAhkBCg-fidT2lY/edit?usp=sharing" target="_blank">Show Data</a></span>
+</form>
+</div>
+<div id="loader"></div>
+<!-- INCLUDE "t2228.php:PHP" -->
+ 
+
+<script>
+var spinner = $('#loader');
+$(function() {
+  $('form').submit(function(e) {
     e.preventDefault();
-    jQuery('#msg').html('Please wait...');
-    jQuery('#btnSubmit').attr('disabled',true);
-    jQuery.ajax({
-      url:'https://script.google.com/macros/s/AKfycbxU-js0mCB9HICjT4zexZLlGLgu_EM2CJp657L7SrIZRPc2-Jq5qEjzAVWnXidRTMmpwA/exec',
-      type:'post',
-      data:jQuery('#frmSubmit').serialize(),
-      success:function(result){
-        jQuery('#frmSubmit')[0].reset();
-        jQuery('#msg').html('');
-        alert("Data Saved.!!")
-        jQuery('#btnSubmit').attr('disabled',false);
-      }
+    spinner.show();
+    $.ajax({
+      url: 'https://script.google.com/macros/s/AKfycbxU-js0mCB9HICjT4zexZLlGLgu_EM2CJp657L7SrIZRPc2-Jq5qEjzAVWnXidRTMmpwA/exec',
+      data: $(this).serialize(),
+      method: 'post',
+      dataType: 'JSON'
+    }).done(function(resp) {
+      spinner.hide();
+      alert("Data Saved");
     });
-    });
-    </script>
+  });
+});
+</script>
 </body>
-</html>
 <style>
   html{
     font-size: 16px;
@@ -321,7 +339,7 @@ h1{
   font-style: italic;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5)
 }
-#frmSubmit{
+#survey-form{
    background: rgba(170, 0, 3, 0.86);
    padding: 2.3rem 0.5rem;
    border-radius: 0.3rem;
@@ -365,7 +383,7 @@ textarea{
  padding: 0.5rem 0 0 0.5rem;
 }
 
-#btnSubmit{
+#myBtn{
  width: 100%;
  padding: 0.8rem;
  background: rgb(7, 173, 10);
@@ -374,4 +392,16 @@ textarea{
  cursor: pointer;
  border: none;
 }
+#show_data{
+    background-color: white;
+     width: 100%;
+ padding: 0.8rem;
+ color: white;
+ border-radius: 0.2rem;
+ cursor: pointer;
+ border: none;
+ margin-left: 40%;
+}
 </style>
+ 
+		
