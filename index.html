@@ -181,6 +181,29 @@ function maxLengthCheck(object)
                <label id='name-label'>ACCOUNT HOLDER MOBILE NO</label>
                <input oninput="maxLengthCheck(this)" type = "number" maxlength = "10" name="ACCOUNT HOLDER MOBILE NO" id='name' placeholder='ACCOUNT HOLDER MOBILE NO' class='form-input-size' required />
            </div>
+
+            <script>
+function copyTextValuerelation(selectedOption) {
+if(selectedOption.selectedIndex <= 0){
+document.getElementById("relation").value = '';
+return;
+}
+
+ var selectedOptionValue = selectedOption.value;
+ document.getElementById("relation").value = selectedOptionValue;
+}
+</script> 
+<input type="text" name="STUDENT RELATION WITH ACCOUNT HOLDER" id="relation" style="visibility:hidden;"> 
+           <div class='form-input'>
+               <p>STUDENT RELATION WITH ACCOUNT HOLDER</p>
+               <select onChange="copyTextValuerelation(this);" id='dropdown' class='form-input-size' required>
+                   <option disabled selected value>--SECECT--</option>
+                   <option value='FATHER'>FATHER</option>
+                   <option value='MOTHER'>MOTHER</option>
+                   <option value='GUARDIAN'>GUARDIAN</option>
+                   <option value='OTHER'>OTHER</option>
+               </select>
+           </div>
 <script>
 function copyTextValue2(selectedOption) {
 if(selectedOption.selectedIndex <= 0){
@@ -284,7 +307,7 @@ $(function() {
     e.preventDefault();
     spinner.show();
     $.ajax({
-      url: 'https://script.google.com/macros/s/AKfycbzCtUlRmE4VMz2JDk-nhlclwVWrcU8eEmSaTzKWKp7uo74Jdd9-twMP-o7wf1bdQRSXQA/exec',
+      url: 'https://script.google.com/macros/s/AKfycbxU-js0mCB9HICjT4zexZLlGLgu_EM2CJp657L7SrIZRPc2-Jq5qEjzAVWnXidRTMmpwA/exec',
       data: $(this).serialize(),
       method: 'post',
       dataType: 'JSON'
@@ -404,4 +427,4 @@ textarea{
 }
 </style>
  
-		
+        
