@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <title>PS CHANDPUR JOGITHER - NAWABGANJ(BAREILLY)</title>
 <style type="text/css">
 #loader {
@@ -51,12 +52,13 @@ return;
                </select>
            </div>
 
-
+<br>
+<br>
            <div class='form-input'>
                <label id='name-label'>FAMILY ID</label>
                <input type='number' name="FAMILY ID" id='name' placeholder='FAMILY ID' class='form-input-size' required />
            </div>
-  
+
 <script>
 function copyTextValueclass(selectedOption) {
 if(selectedOption.selectedIndex <= 0){
@@ -69,7 +71,7 @@ return;
 }
 </script>
 
-<input type="text" name="Class" id="class_out" style="visibility: hidden;">                  
+<input type="text" name="Class" id="class_out" style="visibility: hidden;">
            <div class='form-input'>
                <p>Class</p>
                <select onChange="copyTextValueclass(this);" id='class' class='form-input-size' required>
@@ -115,12 +117,36 @@ function maxLengthCheck(object)
                <label id='name-label'>STUDENT ADHAR NO</label>
                <input oninput="maxLengthCheck(this)" type = "number" maxlength = "12" name="STUDENT ADHAR NO" id='name' placeholder='STUDENT ADHAR NO' class='form-input-size' required />
            </div>
-           
+
            <div class='form-input'>
                <label id='name-label'>Student DOB</label>
                <input type='text' name="Student DOB" placeholder="DD/MM/YYYY" class='form-input-size' required />
            </div>
 
+           <script>
+           function copyTextValuegender(selectedOption) {
+           if(selectedOption.selectedIndex <= 0){
+           document.getElementById("class_out").value = '';
+           return;
+           }
+
+            var selectedOptionValue = selectedOption.value;
+            document.getElementById("gender").value = selectedOptionValue;
+           }
+           </script>
+
+           <input type="text" name="Gender" id="gender" style="visibility: hidden;">
+                      <div class='form-input'>
+                          <p>Gender</p>
+                          <select onChange="copyTextValuegender(this);" class='form-input-size' required>
+                              <option disabled selected value>--SELECT--</option>
+                              <option value="MALE">MALE</option>
+                              <option value="FEMALE">FEMALE</option>
+                              <option value="OTHER">OTHER</option>
+                          </select>
+                      </div>
+<br>
+<br>
            <div class='form-input'>
                <label id='name-label'>FATHER/MOTHER NAME AS PER STUDENT ADHAR</label>
                <input type='text' autocapitalize="characters" name="FATHER/MOTHER NAME AS PER STUDENT ADHAR" id='name' placeholder='FATHER/MOTHER NAME AS PER STUDENT ADHAR' class='form-input-size' required />
@@ -192,8 +218,8 @@ return;
  var selectedOptionValue = selectedOption.value;
  document.getElementById("relation").value = selectedOptionValue;
 }
-</script> 
-<input type="text" name="STUDENT RELATION WITH ACCOUNT HOLDER" id="relation" style="visibility:hidden;"> 
+</script>
+<input type="text" name="STUDENT RELATION WITH ACCOUNT HOLDER" id="relation" style="visibility:hidden;">
            <div class='form-input'>
                <p>STUDENT RELATION WITH ACCOUNT HOLDER</p>
                <select onChange="copyTextValuerelation(this);" id='dropdown' class='form-input-size' required>
@@ -214,8 +240,8 @@ return;
  var selectedOptionValue = selectedOption.value;
  document.getElementById("same_out").value = selectedOptionValue;
 }
-</script> 
-<input type="text" name="SAME FAMILY MEMBER" id="same_out" style="visibility: hidden;"> 
+</script>
+<input type="text" name="SAME FAMILY MEMBER" id="same_out" style="visibility: hidden;">
            <div class='form-input'>
                <p>SAME FAMILY MEMBER</p>
                <select onChange="copyTextValue2(this);" id='dropdown' class='form-input-size' required>
@@ -234,8 +260,8 @@ return;
  var selectedOptionValue = selectedOption.value;
  document.getElementById("card").value = selectedOptionValue;
 }
-</script>  
-<input type="text" name="Ration Card Type" id="card" style="visibility: hidden;">   
+</script>
+<input type="text" name="Ration Card Type" id="card" style="visibility: hidden;">
            <div class='form-input'>
                <p>Ration Card Type</p>
                <select onChange="copyTextValue3(this);" id='dropdown' class='form-input-size' required>
@@ -255,8 +281,8 @@ return;
  var selectedOptionValue = selectedOption.value;
  document.getElementById("Category").value = selectedOptionValue;
 }
-</script>  
-<input type="text" name="Category" id="Category" style="visibility: hidden;">  
+</script>
+<input type="text" name="Category" id="Category" style="visibility: hidden;">
 
            <div class='form-input'>
                <p>Category</p>
@@ -278,7 +304,7 @@ return;
  var selectedOptionValue = selectedOption.value;
  document.getElementById("Is CWSN Student").value = selectedOptionValue;
 }
-</script>  
+</script>
 <input type="text" name="Is CWSN Student" id="Is CWSN Student" style="visibility: hidden;">
            <div class='form-input'>
                <p>Is CWSN Student</p>
@@ -298,7 +324,7 @@ return;
 </div>
 <div id="loader"></div>
 <!-- INCLUDE "t2228.php:PHP" -->
- 
+
 
 <script>
 var spinner = $('#loader');
@@ -380,7 +406,7 @@ h1{
    border-radius: 0.2rem;
    outline: 0;
    border-style: none;
-   margin-top: 0.4rem;  
+   margin-top: 0.4rem;
 }
 p{
  font-size: 1.12rem;
@@ -426,5 +452,3 @@ textarea{
  margin-left: 40%;
 }
 </style>
- 
-        
