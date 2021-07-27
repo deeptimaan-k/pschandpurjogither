@@ -140,13 +140,80 @@ function maxLengthCheck(object)
                           <p>Gender</p>
                           <select onChange="copyTextValuegender(this);" class='form-input-size' required>
                               <option disabled selected value>--SELECT--</option>
-                              <option value="MALE">MALE</option>
-                              <option value="FEMALE">FEMALE</option>
+                              <option value="MALE">GIRL</option>
+                              <option value="FEMALE">BOY</option>
                               <option value="OTHER">OTHER</option>
                           </select>
                       </div>
-<br>
-<br>
+<script>
+function copyTextValueReligion(selectedOption) {
+if(selectedOption.selectedIndex <= 0){
+document.getElementById("Religion").value = '';
+return;
+}
+
+ var selectedOptionValue = selectedOption.value;
+ document.getElementById("Religion").value = selectedOptionValue;
+}
+</script>
+
+<input type="text" name="Religion" id="Religion" style="visibility:hidden;">                  
+           <div class='form-input'>
+               <p>Religion</p>
+               <select onChange="copyTextValueReligion(this);dropdownChange();" class='form-input-size' id="kk" required>
+                   <option disabled selected value>--SELECT--</option>
+                   <option value="HINDUISM">HINDUISM</option>
+                   <option value="ISLAM">ISLAM</option>
+                    <option value="SIKHISM">SIKHISM</option>
+                   <option value="CHRISTANITY">CHRISTANITY</option>
+                   <option value="JAINISM">JAINISM</option>
+                   <option value="BUDDHUHISM">BUDDHUHISM</option>
+                   <option value="ZOROASTRIANISM">ZOROASTRIANISM</option>
+                   <option value="OTHER">OTHER</option>
+               </select>
+               </div>
+               <script type="text/javascript">
+  function dropdownChange(){
+  var car=document.getElementById("kk").value;
+  if(car==="HINDUISM")    {
+    document.getElementById("hold").style.display = 'block';
+  }
+  if(car==="ISLAM")    {
+    document.getElementById("hold").style.display = 'none';
+  }
+  if(car==="SIKHISM")    {
+    document.getElementById("hold").style.display = 'none';
+  }
+  if(car==="CHRISTANITY")    {
+    document.getElementById("hold").style.display = 'none';
+  }
+  if(car==="JAINISM")    {
+    document.getElementById("hold").style.display = 'none';
+  }
+  if(car==="BUDDHUHISM")    {
+    document.getElementById("hold").style.display = 'none';
+  }
+  if(car==="ZOROASTRIANISM")    {
+    document.getElementById("hold").style.display = 'none';
+  }
+  if(car==="OTHER")    {
+    document.getElementById("hold").style.display = 'none';
+  }
+}
+</script>
+<style type="text/css">
+  #hold{
+    display:none;
+  }  
+</style>
+           
+          
+          <div class='form-input' id="hold">
+               <label id='name-label'>CASTE</label>
+               <input type='text' autocapitalize="characters" name="CASTE" id='' placeholder='CASTE' class='form-input-size'/>
+           </div> 
+
+
            <div class='form-input'>
                <label id='name-label'>FATHER/MOTHER NAME AS PER STUDENT ADHAR</label>
                <input type='text' autocapitalize="characters" name="FATHER/MOTHER NAME AS PER STUDENT ADHAR" id='name' placeholder='FATHER/MOTHER NAME AS PER STUDENT ADHAR' class='form-input-size' required />
